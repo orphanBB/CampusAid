@@ -1,0 +1,45 @@
+<!--pages/mine/mine.wxml-->
+
+<!--index.wxml-->
+<view class="container">
+<!--用户头像_开始-->
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap"  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+      <image class="more_info" src="../../images/more_info.png"></image>
+  </view>
+<!--用户头像_结束-->
+</view>
+
+<view class="ol-contianer">
+  <button class="li-contianer" bindtap="gotomypublish">
+    我的发布
+  </button>
+  <button class="li-contianer" bindtap="gotomytask">
+    <text>我的任务</text>
+  </button>
+  <button class="li-contianer" bindtap="gotomycollect">
+    <text>我的收藏</text>
+  </button>
+  <button class="li-contianer" bindtap="gotomypurse">
+    <text>我的钱包</text>
+  </button>
+  <button class="set-contianer" bindtap="gotosetting">
+    <text>设置</text>
+  </button>
+</view>
+
+<!--添加按钮开始-->
+<view class="addButtonContainer">
+  <button class="addButton" catchtap="clickadd"><image class="addimage" src="{{addicon}}"></image></button>
+  <view class="showorhide_hide{{showView?'showorhide_show':''}}">
+    <button class="publish1">赏金任务</button>
+    <button class="publish2">赏金任务</button>
+    <button class="publish3">赏金任务</button>
+    <button class="publish4">赏金任务</button>
+  </view>
+</view>
+<!--添加按钮结束-->

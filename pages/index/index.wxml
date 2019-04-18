@@ -1,0 +1,185 @@
+<!--index.wxml-->
+
+<!--位置信息_开始-->
+
+<view class="locationcontainer">
+  <image src="../../images/location.png"></image>
+  <view class="locationtext"><text>{{address}}></text></view>
+</view>
+
+<!--位置信息_结束-->
+
+<!--搜索输入_开始-->
+<view class="section">
+  <input bindtouchstart="bindInput" placeholder="查找" value="{{keywords}}" />
+</view>
+<!--搜索输入_结束-->
+
+<!--菜单_开始-->
+<view class="menu">
+<!--第一行-->
+    <!--按钮-->
+  <view class="menuicon">
+    <button catchtap="handleClicks"  class="circle">
+      <image mode="scaleToFill" src="../../images/shangjin.png" plain="true" class="image"></image>
+    </button>
+    <button catchtap="handleClicks"  class="circle">
+      <image mode="scaleToFill" src="../../images/shangjin.png" plain="true" class="image"></image>
+    </button>
+    <button catchtap="handleClicks"  class="circle">
+      <image mode="scaleToFill" src="../../images/shangjin.png" plain="true" class="image"></image>
+    </button>
+    <button catchtap="handleClicks"  class="circle">
+      <image mode="scaleToFill" src="../../images/shangjin.png" plain="true" class="image"></image>
+    </button>
+    <button catchtap="handleClicks"  class="circle">
+      <image mode="scaleToFill" src="../../images/shangjin.png" plain="true" class="image"></image>
+    </button>
+  </view>
+    <!--文字-->
+  <view class="textls">
+    <view class="viewclass">
+      <text>快递代拿</text>
+    </view>
+    <view class="viewclass">
+      <text>外卖兼职</text>
+    </view>
+    <view class="viewclass">
+     <text>传单派送</text>
+    </view>
+    <view class="viewclass">
+      <text>跳蚤市场</text>
+    </view>
+    <view class="viewclass">
+      <text>校园动态</text>
+    </view>
+  </view>
+<!--第二行-->
+    <!--按钮-->
+  <view class="menuicon">
+    <button catchtap="handleClicks"  class="circle">
+        <image mode="scaleToFill" src="../../images/shangjin.png" plain="true" class="image"></image>
+      </button>
+      <button catchtap="handleClicks"  class="circle">
+        <image mode="scaleToFill" src="../../images/shangjin.png" plain="true" class="image"></image>
+      </button>
+      <button catchtap="handleClicks"  class="circle">
+        <image mode="scaleToFill" src="../../images/shangjin.png" plain="true" class="image"></image>
+      </button>
+      <button catchtap="handleClicks"  class="circle">
+        <image mode="scaleToFill" src="../../images/shangjin.png" plain="true" class="image"></image>
+      </button>
+      <button catchtap="handleClicks"  class="circle">
+        <image mode="scaleToFill" src="../../images/shangjin.png" plain="true" class="image"></image>
+      </button>
+    </view>
+    <!--文字-->
+  <view class="textls">
+    <view class="viewclass">
+      <text>约活动</text>
+    </view>
+    <view class="viewclass">
+      <text>失物招领</text>
+    </view>
+    <view class="viewclass">
+      <text>校园提醒</text>
+    </view>
+    <view class="viewclass">
+      <text>社团活动</text>
+    </view>
+    <view class="viewclass">
+      <text>学校通知</text>
+    </view>
+  </view>
+</view>
+<!--菜单_结束-->
+
+<!--主题内容_开始-->
+<view class="main-content">
+
+  <view class="content">
+    <view class="content-title">三月，醉一场青春的流年</view>
+    <view class="content-body">三月，醉一场青春的流年。慢步在三月的春光里，走走停停，看花开嫣然，看春雨绵绵，感受春风拂面，春天，就是青春的流年。青春，是人生中最美的风景。青春，是一场花开的遇见；青春，是一场痛并快乐着的旅行；青春，是一场轰轰烈烈的比赛；青春，是一场鲜衣奴马的争荣岁月；青春，是一场风花雪月的光阴。</view>
+    <view class="content-remark">
+    <input bindtouchstart="bindInput" placeholder="评论" value="{{comment}}" />
+    <button class="comment" bindtap="clickzan">
+    <image src="{{zanicon}}"></image>
+    </button>
+    <text>\n</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="content-title">三月，醉一场青春的流年</view>
+    <view class="content-body">三月，醉一场青春的流年。慢步在三月的春光里，走走停停，看花开嫣然，看春雨绵绵，感受春风拂面，春天，就是青春的流年。青春，是人生中最美的风景。青春，是一场花开的遇见；青春，是一场痛并快乐着的旅行；青春，是一场轰轰烈烈的比赛；青春，是一场鲜衣奴马的争荣岁月；青春，是一场风花雪月的光阴。</view>
+    <view class="content-remark">
+    <input bindtouchstart="bindInput" placeholder="评论" value="{{comment}}" />
+    <button class="comment" bindtap="clickzan">
+    <image src="{{zanicon}}"></image>
+    </button>
+    <text>\n</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="content-title">三月，醉一场青春的流年</view>
+    <view class="content-body">三月，醉一场青春的流年。慢步在三月的春光里，走走停停，看花开嫣然，看春雨绵绵，感受春风拂面，春天，就是青春的流年。青春，是人生中最美的风景。青春，是一场花开的遇见；青春，是一场痛并快乐着的旅行；青春，是一场轰轰烈烈的比赛；青春，是一场鲜衣奴马的争荣岁月；青春，是一场风花雪月的光阴。</view>
+    <view class="content-remark">
+    <input bindtouchstart="bindInput" placeholder="评论" value="{{comment}}" />
+    <button class="comment" bindtap="clickzan">
+    <image src="{{zanicon}}"></image>
+    </button>
+    <text>\n</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="content-title">三月，醉一场青春的流年</view>
+    <view class="content-body">三月，醉一场青春的流年。慢步在三月的春光里，走走停停，看花开嫣然，看春雨绵绵，感受春风拂面，春天，就是青春的流年。青春，是人生中最美的风景。青春，是一场花开的遇见；青春，是一场痛并快乐着的旅行；青春，是一场轰轰烈烈的比赛；青春，是一场鲜衣奴马的争荣岁月；青春，是一场风花雪月的光阴。</view>
+    <view class="content-remark">
+    <input bindtouchstart="bindInput" placeholder="评论" value="{{comment}}" />
+    <button class="comment" bindtap="clickzan">
+    <image src="{{zanicon}}"></image>
+    </button>
+    <text>\n</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="content-title">三月，醉一场青春的流年</view>
+    <view class="content-body">三月，醉一场青春的流年。慢步在三月的春光里，走走停停，看花开嫣然，看春雨绵绵，感受春风拂面，春天，就是青春的流年。青春，是人生中最美的风景。青春，是一场花开的遇见；青春，是一场痛并快乐着的旅行；青春，是一场轰轰烈烈的比赛；青春，是一场鲜衣奴马的争荣岁月；青春，是一场风花雪月的光阴。</view>
+    <view class="content-remark">
+    <input bindtouchstart="bindInput" placeholder="评论" value="{{comment}}" />
+    <button class="comment" bindtap="clickzan">
+    <image src="{{zanicon}}"></image>
+    </button>
+    <text>\n</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="content-title">三月，醉一场青春的流年</view>
+    <view class="content-body">三月，醉一场青春的流年。慢步在三月的春光里，走走停停，看花开嫣然，看春雨绵绵，感受春风拂面，春天，就是青春的流年。青春，是人生中最美的风景。青春，是一场花开的遇见；青春，是一场痛并快乐着的旅行；青春，是一场轰轰烈烈的比赛；青春，是一场鲜衣奴马的争荣岁月；青春，是一场风花雪月的光阴。</view>
+    <view class="content-remark">
+    <input bindtouchstart="bindInput" placeholder="评论" value="{{comment}}" />
+    <button class="comment" bindtap="clickzan">
+    <image src="{{zanicon}}"></image>
+    </button>
+    <text>\n</text>
+    </view>
+  </view>
+</view>
+<!--主题内容_开始-->
+
+<!--添加按钮开始-->
+<view class="addButtonContainer">
+  <button class="addButton" catchtap="clickadd"><image class="addimage" src="{{addicon}}"></image></button>
+  <view class="showorhide_hide{{showView?'showorhide_show':''}}">
+    <button class="publish1">赏金任务</button>
+    <button class="publish2">赏金任务</button>
+    <button class="publish3">赏金任务</button>
+    <button class="publish4">赏金任务</button>
+  </view>
+</view>
+<!--添加按钮结束-->
+

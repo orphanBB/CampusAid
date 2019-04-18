@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/share/share",
+    "pages/logs/logs",
+    "pages/mypublish/mypublish",
+    "pages/mytask/mytask",
+    "pages/mycollect/mycollect",
+    "pages/mypurse/mypurse",
+    "pages/setting/setting"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0097E6",
+    "navigationBarTitleText": "校园帮",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#BF9F9F",
+    "selectedColor": "#7cd0f8",
+    "list": [
+      {
+        "pagePath": "pages/share/share",
+        "iconPath": "images/share.png",
+        "selectedIconPath": "images/share_HL.png",
+        "text": "动态"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_HL.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine_HL.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+<!--pages/add/add.wxml-->
+<!--搜索输入_开始-->
+<view class="section">
+  <input bindtouchstart="bindInput" placeholder="查找" value="{{keywords}}" />
+</view>
+<!--搜索输入_结束-->
+
+<!--添加按钮开始-->
+<view class="addButtonContainer">
+  <button class="addButton" catchtap="clickadd"><image class="addimage" src="{{addicon}}"></image></button>
+  <view class="showorhide_hide{{showView?'showorhide_show':''}}">
+    <button class="publish1">赏金任务</button>
+    <button class="publish2">赏金任务</button>
+    <button class="publish3">赏金任务</button>
+    <button class="publish4">赏金任务</button>
+  </view>
+</view>
+<!--添加按钮结束-->
