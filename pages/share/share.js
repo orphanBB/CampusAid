@@ -1,5 +1,6 @@
 // pages/add/add.js
 var countclick = 0;
+var countzanclick = 0;
 
 Page({
 
@@ -8,6 +9,7 @@ Page({
    */
   data: {
     addicon: "../../images/add.png",
+    zanicon: "../../images/zan.png",
   },
 
   /**
@@ -80,6 +82,21 @@ Page({
           showView:false,
         });
       countclick = 0;
+    }
+  },
+  clickzan: function () {
+    if (countzanclick == 0) {
+      this.setData(
+        {
+          zanicon: "../../images/zan_HL.png",
+        });
+      countzanclick = 1;
+    } else {
+      this.setData(
+        {
+          zanicon: "../../images/zan.png",
+        });
+      countzanclick = 0;
     }
   }
 })

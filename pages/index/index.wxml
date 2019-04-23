@@ -95,11 +95,16 @@
 <!--菜单_结束-->
 
 <!--主题内容_开始-->
+
+<!--此处开始屏蔽
 <view class="main-content">
 
   <view class="content">
-    <view class="content-title">三月，醉一场青春的流年</view>
-    <view class="content-body">三月，醉一场青春的流年。慢步在三月的春光里，走走停停，看花开嫣然，看春雨绵绵，感受春风拂面，春天，就是青春的流年。青春，是人生中最美的风景。青春，是一场花开的遇见；青春，是一场痛并快乐着的旅行；青春，是一场轰轰烈烈的比赛；青春，是一场鲜衣奴马的争荣岁月；青春，是一场风花雪月的光阴。</view>
+    <view class="content-title">【快递代拿】</view>
+    <view class="content-body">
+    <text>【菜鸟驿站】您的申通*8183包裹已由岳阳畔湖湾甲区2排4栋5号店免费保管，请18:30前凭“3-1-1378”及时领取。\n联系驿站18073192675，\n地址：畔湖湾社区博才幼儿园后门菜鸟驿站。
+    </text>
+</view>
     <view class="content-remark">
     <input bindtouchstart="bindInput" placeholder="评论" value="{{comment}}" />
     <button class="comment" bindtap="clickzan">
@@ -110,8 +115,11 @@
   </view>
 
   <view class="content">
-    <view class="content-title">三月，醉一场青春的流年</view>
-    <view class="content-body">三月，醉一场青春的流年。慢步在三月的春光里，走走停停，看花开嫣然，看春雨绵绵，感受春风拂面，春天，就是青春的流年。青春，是人生中最美的风景。青春，是一场花开的遇见；青春，是一场痛并快乐着的旅行；青春，是一场轰轰烈烈的比赛；青春，是一场鲜衣奴马的争荣岁月；青春，是一场风花雪月的光阴。</view>
+    <view class="content-title">【外卖兼职】</view>
+    <view class="content-body">
+    <text>招聘：湖南理工学院南院外卖送餐员一名，主要负责南院7栋宿舍到18栋宿舍这一块的外卖配送。\n工作时间：11:30-14:00  16:30-22:00（时间段内自由分配工作时间）\n工资：每份2-5元，按配送份数发放\n联系方式：张  15147682458
+    </text>
+    </view>
     <view class="content-remark">
     <input bindtouchstart="bindInput" placeholder="评论" value="{{comment}}" />
     <button class="comment" bindtap="clickzan">
@@ -169,7 +177,8 @@
     </view>
   </view>
 </view>
-<!--主题内容_开始-->
+--此处结束屏蔽>
+<!--主题内容_结束-->
 
 <!--添加按钮开始-->
 <view class="addButtonContainer">

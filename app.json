@@ -24,7 +24,7 @@
         "pagePath": "pages/share/share",
         "iconPath": "images/share.png",
         "selectedIconPath": "images/share_HL.png",
-        "text": "动态"
+        "text": "帮帮"
       },
       {
         "pagePath": "pages/index/index",

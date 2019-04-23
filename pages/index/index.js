@@ -14,14 +14,14 @@ Page({
     address:"正在获取当前位置",
   },
   onLoad: function () {
-    var that = this
+    var that = this,
     // 实例化腾讯地图API核心类
     qqmapsdk = new QQMapWX({
       key: '3AZBZ-PLX6V-7VNPT-UIJI7-TJ6I6-Q6FQU' // 必填
     });
     //1、获取当前位置坐标
     wx.getLocation({
-      keyword:"学校",
+      type:"wgs84",
       
       success: function (res) {
         //2、根据坐标获取当前位置名称，显示在顶部:腾讯地图逆地址解析
@@ -34,7 +34,7 @@ Page({
             var address = addressRes.result.formatted_addresses.recommend;
             console.log(address);
             that.setData({
-              address:address,
+              address:address
             })
           }
         })
@@ -69,7 +69,7 @@ Page({
     }else{
       this.setData(
         {
-          zanicon: "../../images/zan.png",
+          zanicon: "../../images/zan.png", 
         });
       countzanclick = 0;
     }
