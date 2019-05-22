@@ -12,6 +12,15 @@ Page({
     addicon:"../../images/add.png",
     zanicon:"../../images/zan.png",
     address:"正在获取当前位置",
+    imgUrls: [
+      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
+      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
+      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
+    ],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000
   },
   onLoad: function () {
     var that = this,
@@ -73,5 +82,55 @@ Page({
         });
       countzanclick = 0;
     }
-  }
-})
+  },
+
+  //以下为搜索框事件
+  showInput: function () {
+    this.setData({
+      inputShowed: true
+    });
+  },
+  hideInput: function () {
+    this.setData({
+      inputVal: "",
+      inputShowed: false
+    });
+  },
+  clearInput: function () {
+    this.setData({
+      inputVal: ""
+    });
+  },
+  inputTyping: function (e) {
+    this.setData({
+      inputVal: e.detail.value
+    });
+  },
+  toSearch: function () {
+    this.setData({
+      curPage: 1
+    });
+    this.getGoodsList(this.data.activeCategoryId);
+  },
+  //轮播图
+  changeIndicatorDots(e) {
+    this.setData({
+      indicatorDots: !this.data.indicatorDots
+    })
+  },
+  changeAutoplay(e) {
+    this.setData({
+      autoplay: !this.data.autoplay
+    })
+  },
+  intervalChange(e) {
+    this.setData({
+      interval: e.detail.value
+    })
+  },
+  durationChange(e) {
+    this.setData({
+      duration: e.detail.value
+    })
+  },//轮播图结束
+  })

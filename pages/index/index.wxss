@@ -24,7 +24,7 @@
 .menu{
   margin: 20px auto auto 5%;
   width: 90%;
-  height: 230px;
+  height: auto;
   border: 0 solid #ffffff;
 }
 
@@ -57,7 +57,7 @@ justify-content:flex-end;
 }
 
 .viewclass{
-  width: 80px;
+  width: 100px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -126,6 +126,11 @@ justify-content:flex-end;
 }
 
 
+swiper-item image {
+  margin-top: 30rpx;
+  width: 750rpx;
+  height:300rpx;
+}
 
 
 

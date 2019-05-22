@@ -13,12 +13,14 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.4",
-	"appid": "wx05388c20835a6f2b",
+	"appid": "wx78ed22e4f0f4c0d3",
 	"projectname": "CampusAid",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

@@ -2,14 +2,14 @@
 
 /*搜索相关*/
 
-.section-content{
+.weui-search-bar{
   margin:0 auto; 
   position: fixed;
-  width:100%;
-  height: 40px;
+  width: 100%;
   margin-top: -50px;
-  background-color: #ffffff;
+  background-color:rgba(239,239,240);
 }
+
 /*内容相关*/
 .main-content{
     margin: 50px auto;
