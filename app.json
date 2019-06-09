@@ -8,7 +8,16 @@
     "pages/mytask/mytask",
     "pages/mycollect/mycollect",
     "pages/mypurse/mypurse",
-    "pages/setting/setting"
+    "pages/setting/setting",
+    "pages/location/location",
+    "pages/daina/daina",
+    "pages/jianzhi/jianzhi",
+    "pages/ershou/ershou",
+    "pages/dongtai/dongtai",
+    "pages/huodong/huoodng",
+    "pages/findlost/findlost",
+    "pages/tixing/tixing",
+    "pages/shetuan/shetuan"
   ],
   "window": {
     "backgroundTextStyle": "light",

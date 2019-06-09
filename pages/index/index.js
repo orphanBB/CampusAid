@@ -6,6 +6,8 @@ var countzanclick = 0;
 //引入SDK核心类
 var QQMapWX = require('../../lib/qqmap-wx-jssdk.js');
 var qqmapsdk;
+var lat;
+var lon;
 
 Page({
   data: {
@@ -13,9 +15,10 @@ Page({
     zanicon:"../../images/zan.png",
     address:"正在获取当前位置",
     imgUrls: [
-      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
+      'https://i.loli.net/2019/06/06/5cf8f2a0eb10c64658.jpg',
+      'https://i.loli.net/2019/06/06/5cf8f374229f244773.jpg',
+      'https://i.loli.net/2019/06/06/5cf8f37d60a8752721.jpg',
+      'https://i.loli.net/2019/06/06/5cf8f460a3a9589792.jpg',
     ],
     indicatorDots: true,
     autoplay: true,
@@ -28,10 +31,10 @@ Page({
     qqmapsdk = new QQMapWX({
       key: '3AZBZ-PLX6V-7VNPT-UIJI7-TJ6I6-Q6FQU' // 必填
     });
+    
     //1、获取当前位置坐标
     wx.getLocation({
-      type:"wgs84",
-      
+      type:"gcj02",
       success: function (res) {
         //2、根据坐标获取当前位置名称，显示在顶部:腾讯地图逆地址解析
         qqmapsdk.reverseGeocoder({
@@ -47,6 +50,35 @@ Page({
             })
           }
         })
+      }
+    })
+  },
+  nearby_search: function () {
+    var _this = this;
+    // 调用接口
+    qqmapsdk.search({
+      keyword: '学校',  //搜索关键词
+      location: '39.980014, 116.313972',  //设置周边搜索中心点
+      success: function (res) { //搜索成功后的回调
+        var mks = []
+        for (var i = 0; i < res.data.length; i++) {
+          mks.push({ // 获取返回结果，放到mks数组中
+            title: res.data[i].title,
+            id: res.data[i].id,
+            latitude: res.data[i].location.lat,
+            longitude: res.data[i].location.lng,
+            iconPath: "/resources/my_marker.png", //图标路径
+            width: 20,
+            height: 20
+          })
+          console.log(mks);
+        }
+      },
+      fail: function (res) {
+        console.log(res);
+      },
+      complete: function (res) {
+        console.log(res);
       }
     })
   },
@@ -133,4 +165,9 @@ Page({
       duration: e.detail.value
     })
   },//轮播图结束
+  gotodaina: function () {
+    wx.navigateTo({
+      url: "../../pages/daina/daina"
+    })
+  },
   })
