@@ -89,9 +89,27 @@ Page({
       url: "../../pages/mypurse/mypurse"
     })
   },
+  gotouserconfirm: function () {
+    wx.navigateTo({
+      url: "../../pages/userconfirm/userconfirm"
+    })
+  },
   gotosetting: function () {
     wx.navigateTo({
       url: "../../pages/setting/setting"
     })
-  }
+  },
+  modalcnt: function () {
+    wx.showModal({
+      title: '提示',
+      content: '此功能暂未开放',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  }  
 })

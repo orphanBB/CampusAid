@@ -170,4 +170,57 @@ Page({
       url: "../../pages/daina/daina"
     })
   },
+  gotojianzhi: function () {
+    wx.navigateTo({
+      url: "../../pages/jianzhi/jianzhi"
+    })
+  },
+  gotoershou: function () {
+    wx.navigateTo({
+      url: "../../pages/ershou/ershou"
+    })
+  },
+  gotodongtai: function () {
+    wx.navigateTo({
+      url: "../../pages/dongtai/dongtai"
+    })
+  },
+  gotohuodong: function () {
+    wx.navigateTo({
+      url: "../../pages/huodong/huodong"
+    })
+  },
+  gotofindlost: function () {
+    wx.navigateTo({
+      url: "../../pages/findlost/findlost"
+    })
+  },
+  gototixing: function () {
+    wx.navigateTo({
+      url: "../../pages/tixing/tixing"
+    })
+  },
+  gotoshetuan: function () {
+    wx.navigateTo({
+      url: "../../pages/shetuan/shetuan"
+    })
+  },
+  todetailstap: function () {
+    wx.navigateTo({
+      url: "../../pages/detailstap/detailstap"
+    })
+  },
+  modalcnt: function () {
+    wx.showModal({
+      title: '提示',
+      content: '此功能暂未开放',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  }  
   })

@@ -11,7 +11,38 @@
 }
 
 .userinfo {
-  margin-left: -220px;
+  margin-left: -120px;
+}
+
+.defaultheadimg
+{
+  margin-left: -26rpx;
+  width: 128rpx;
+  height: 128rpx;
+}
+
+.userheadimg{
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  float: left;
+}
+
+.userheadimg::after{
+  border: none;
+}
+
+.login_btn{
+  margin-top: 18px;
+  width: 100px;
+  height: 30px;
+  font-family: 'Times New Roman',Cambria, Cochin, Georgia, Times,  serif;
+  font-size: 12px;
+  float: left;
+}
+
+.login_btn::after{
+  border: none;
 }
 
 .userinfo-avatar {
@@ -33,6 +64,10 @@
   right: 10px;
   width: 20px;
   height: 20px;
+}
+
+.morebtn{
+  
 }
 
 /*列表相关*/

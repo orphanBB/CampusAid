@@ -1,18 +1,18 @@
 <!--index.wxml-->
 <view>
-<!--位置信息_开始-->
 
+<!--位置信息_开始-->
  <view class="heard">
-    <navigator url="/pages/location/location" bindtap='nearby_search'>
+    <navigator bindtap='modalcnt'>
       <view class="heard-location">
         <image src="../../images/location.png" 
         class="heard-location-icon"/>
         <text class="heard-location-text">{{address}}</text>
       </view>
     </navigator>
-    <view class="heard-search">
+    <view class="heard-search" bindtap='modalcnt'>
       <image src="../../images/search.png" class="heard-search-icon"/>
-      <text style="color:rgba(0,0,0,0.3)">湖南理工学院</text>
+      <text style="color:rgba(0,0,0,0.3)">搜索学校/二手物品/兼职/活动</text>
     </view>
   </view>
   <!--位置信息_结束-->
@@ -43,17 +43,17 @@
     <!--第一行-->
     <!--按钮-->
     <view class="menuicon">
-      <button catchtap="handleClicks"  class="circle" bindtap="gotodaina">
-        <image mode="scaleToFill" src="../../images/kuaidi.png" plain="true" class="image"></image>
+      <button class="circle" bindtap="modalcnt"><!--bindtap替换为.js文件中对应的方法-->
+        <image mode="scaleToFill" src="../../images/icon/delivery.png" plain="true" class="image" ></image>
       </button>
-      <button catchtap="handleClicks"  class="circle" bindtap="gotojianzhi">
-        <image mode="scaleToFill" src="../../images/jianzhi.png" plain="true" class="image"></image>
+      <button class="circle" bindtap="modalcnt">
+        <image mode="scaleToFill" src="../../images/icon/parttimejob.png" plain="true" class="image"></image>
       </button>
-      <button catchtap="handleClicks"  class="circle" bindtap="gotoershou">
-        <image mode="scaleToFill" src="../../images/ershou.png" plain="true" class="image"></image>
+      <button class="circle" bindtap="modalcnt">
+        <image mode="scaleToFill" src="../../images/icon/secondhand.png" plain="true" class="image"></image>
       </button>
-      <button catchtap="handleClicks"  class="circle" bindtap="gotodongtai">
-        <image mode="scaleToFill" src="../../images/dongtai.png" plain="true" class="image"></image>
+      <button class="circle" bindtap="modalcnt">
+        <image mode="scaleToFill" src="../../images/icon/schoolevent.png" plain="true" class="image"></image>
       </button>
     </view>
     <!--文字-->
@@ -72,19 +72,20 @@
       </view>
     </view>
     <!--第二行-->
+
     <!--按钮-->
     <view class="menuicon">
-      <button catchtap="handleClicks"  class="circle" bindtap="gotohuodong">
-        <image mode="scaleToFill" src="../../images/huodong.png" plain="true" class="image"></image>
+      <button class="circle" bindtap="modalcnt">
+        <image mode="scaleToFill" src="../../images/icon/activity.png" plain="true" class="image"></image>
       </button>
-      <button catchtap="handleClicks"  class="circle" bindtap="gotofindlost">
-        <image mode="scaleToFill" src="../../images/zhaoling.png" plain="true" class="image"></image>
+      <button class="circle" bindtap="modalcnt">
+        <image mode="scaleToFill" src="../../images/icon/findlost.png" plain="true" class="image"></image>
       </button>
-      <button catchtap="handleClicks"  class="circle" bindtap="gototixing">
-        <image mode="scaleToFill" src="../../images/tongzhi.png" plain="true" class="image"></image>
+      <button class="circle" bindtap="modalcnt">
+        <image mode="scaleToFill" src="../../images/icon/warning.png" plain="true" class="image"></image>
       </button>
-      <button catchtap="handleClicks"  class="circle" bindtap="gotoshetuan">
-        <image mode="scaleToFill" src="../../images/shetuan.png" plain="true" class="image"></image>
+      <button class="circle" bindtap="modalcnt">
+        <image mode="scaleToFill" src="../../images/icon/teamparty.png" plain="true" class="image"></image>
       </button>
     </view>
     <!--文字-->
@@ -105,12 +106,9 @@
   </view>
   <!--菜单_结束-->
 
-  <swiper
-  indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}"
-  interval="{{interval}}"
-  duration="{{duration}}"
->
+
+  <!--轮播图开始-->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   <block wx:for="{{imgUrls}}">
     <swiper-item>
       <image src="{{item}}" class="slide-image" width="355" height="150" />
@@ -123,11 +121,23 @@
 </view>
 
 <view class="goods-container">
-    <view class="goods-box" bindtap="toDetailsTap" data-id="{{item.id}}">
+    <view class="goods-box" bindtap="modalcnt" data-id="{{item.id}}">
       <view class="img-box">
         <image src="https://i.loli.net/2019/06/06/5cf8f49a0e77518933.png" class="image" mode="aspectFill" lazy-load="true" />
       </view>
       <view class="goods-title">【二手】志高落地风扇</view>
+      <view style='display:flex;'>
+        <view class="goods-price">¥ 99</view>
+        <view wx:if="{{item.originalPrice && item.originalPrice > 0}}" class="goods-price" style='color:#aaa;text-decoration:line-through'>¥ {{item.originalPrice}}</view>
+      </view>
+    </view>
+
+
+<view class="goods-box" bindtap="modalcnt" data-id="{{item.id}}">
+      <view class="img-box">
+        <image src="https://i.loli.net/2019/06/13/5d023cfd0fa7145939.jpg" class="image" mode="aspectFill" lazy-load="true" />
+      </view>
+      <view class="goods-title">【二手】38寸学生初学者吉他新手入门练习琴民谣木吉他送教学配件全套</view>
       <view style='display:flex;'>
         <view class="goods-price">¥ 99</view>
         <view wx:if="{{item.originalPrice && item.originalPrice > 0}}" class="goods-price" style='color:#aaa;text-decoration:line-through'>¥ {{item.originalPrice}}</view>
@@ -143,28 +153,36 @@
   <!--主题内容_开始-->
 <view class="main-content">
   <view class="content">
-    <view class="content-title">【快递代拿】</view>
+    <view class="content-user">
+      <view class="user-head"><image src="../../images/logo.png"></image></view>
+      <view class="user-name">校园帮</view>
+      <view class="content-title">【快递代拿】</view>
+    </view>
     <view class="content-body">
-    <text>有个快递没时间拿，求帮拿一下，有偿\n【菜鸟驿站】您的申通*8183包裹已由岳阳畔湖湾甲区2排4栋5号店免费保管，请18:30前凭“******”及时领取。\n联系驿站18073192675，\n地址：畔湖湾社区博才幼儿园后门菜鸟驿站。
-    </text>
-</view>
+      <text space="nbsp">  有个快递没时间拿，求帮拿一下，有偿\n【菜鸟驿站】您的申通*8183包裹已由岳阳畔湖湾甲区2排4栋5号店免费保管，请18:30前凭“******”及时领取。\n联系驿站18073192675，\n地址：畔湖湾社区博才幼儿园后门菜鸟驿站。
+      </text>
+    </view>
     <view class="content-remark">
-    <input bindtouchstart="bindInput" placeholder="评论" value="{{comment}}" />
-    <button class="comment" bindtap="clickzan">
-    <image src="{{zanicon}}"></image>
-    </button>
-    <text>\n</text>
+      <input bindtouchstart="bindInput" placeholder="评论" value="{{comment}}" />
+      <button class="clickzan" bindtap="clickzan">
+      <image src="{{zanicon}}"></image>
+      </button>
+      <text>\n</text>
     </view>
   </view>
 
   <view class="content">
-    <image src="../../images/logo.png" class="content-img"></image>
-    <text>hello kitty</text>
-    <view class="content-title">三月，醉一场青春的流年</view>
-    <view class="content-body">三月，醉一场青春的流年。慢步在三月的春光里，走走停停，看花开嫣然，看春雨绵绵，感受春风拂面，春天，就是青春的流年。青春，是人生中最美的风景。青春，是一场花开的遇见；青春，是一场痛并快乐着的旅行；青春，是一场轰轰烈烈的比赛；青春，是一场鲜衣奴马的争荣岁月；青春，是一场风花雪月的光阴。</view>
+    <view class="content-user">
+      <view class="user-head"><image src="../../images/logo.png"></image></view>
+      <view class="user-name">校园帮</view>
+      <view class="content-title">【校园动态】</view>
+    </view>
+    <view class="content-body">
+    <text space="nbsp">  三月，醉一场青春的流年。慢步在三月的春光里，走走停停，看花开嫣然，看春雨绵绵，感受春风拂面，春天，就是青春的流年。青春，是人生中最美的风景。青春，是一场花开的遇见；青春，是一场痛并快乐着的旅行；青春，是一场轰轰烈烈的比赛；青春，是一场鲜衣奴马的争荣岁月；青春，是一场风花雪月的光阴。</text>
+    </view>
     <view class="content-remark">
     <input bindtouchstart="bindInput" placeholder="评论" value="{{comment}}" />
-    <button class="comment" bindtap="clickzan">
+    <button class="clickzan" bindtap="clickzan">
     <image src="{{zanicon}}"></image>
     </button>
     <text>\n</text>
@@ -179,11 +197,11 @@
     <button class="addButton" catchtap="clickadd">
       <image class="addimage" src="{{addicon}}"></image>
     </button>
-    <view class="showorhide_hide{{showView?'showorhide_show':''}}">
-      <button class="publish1">赏金任务</button>
-      <button class="publish2">赏金任务</button>
-      <button class="publish3">赏金任务</button>
-      <button class="publish4">赏金任务</button>
+    <view class="showorhide_hide{{showView?'showorhide_show':''}}" id="addbtn"> 
+      <button class="publish1" bindtap='modalcnt'><image src="../../images/icon/delivery.png"></image></button>
+      <button class="publish2" bindtap='modalcnt'><image src="../../images/icon/schoolevent.png"></image></button>
+      <button class="publish3" bindtap='modalcnt'><image src="../../images/icon/secondhand.png"></image></button>
+      <button class="publish4" bindtap='modalcnt'><image src="../../images/icon/findlost.png"></image></button>
     </view>
   </view>
   <!--添加按钮结束-->

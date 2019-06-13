@@ -4,42 +4,55 @@
 <view class="container">
 <!--用户头像_开始-->
   <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <button class="userheadimg" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+    <image class="defaultheadimg" src="../../images/logo.png"></image>
+    </button>
     <block wx:else>
       <image bindtap="bindViewTap"  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
-    <view><image class="more_info" src="../../images/more_info.png"></image></view>
+    <button class="login_btn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">去登录>>></button>
+    <block wx:else>
+
+    </block>
+    <view>
+        <image class="more_info" src="../../images/more_info.png"  bindtap='modalcnt'></image>
+    </view>
   </view>
 <!--用户头像_结束-->
 </view>
 
 <view class="ol-contianer">
-  <button class="li-contianer" bindtap="gotomypublish">
+  <button class="li-contianer" bindtap="modalcnt">
     我的发布
   </button>
-  <button class="li-contianer" bindtap="gotomytask">
+  <button class="li-contianer" bindtap="modalcnt">
     <text>我的任务</text>
   </button>
-  <button class="li-contianer" bindtap="gotomycollect">
+  <button class="li-contianer" bindtap="modalcnt">
     <text>我的收藏</text>
   </button>
-  <button class="li-contianer" bindtap="gotomypurse">
+  <button class="li-contianer" bindtap="modalcnt">
     <text>我的钱包</text>
   </button>
-  <button class="set-contianer" bindtap="gotosetting">
+   <button class="set-contianer" bindtap="modalcnt">
+    <text>用户认证</text>
+  </button>
+  <button class="li-contianer" bindtap="modalcnt">
     <text>设置</text>
   </button>
 </view>
 
 <!--添加按钮开始-->
-<view class="addButtonContainer">
-  <button class="addButton" catchtap="clickadd"><image class="addimage" src="{{addicon}}"></image></button>
-  <view class="showorhide_hide{{showView?'showorhide_show':''}}">
-    <button class="publish1">赏金任务</button>
-    <button class="publish2">赏金任务</button>
-    <button class="publish3">赏金任务</button>
-    <button class="publish4">赏金任务</button>
+  <view class="addButtonContainer">
+    <button class="addButton" catchtap="clickadd">
+      <image class="addimage" src="{{addicon}}"></image>
+    </button>
+    <view class="showorhide_hide{{showView?'showorhide_show':''}}" id="addbtn"> 
+      <button class="publish1"><image src="../../images/icon/delivery.png"></image></button>
+      <button class="publish2"><image src="../../images/icon/schoolevent.png"></image></button>
+      <button class="publish3"><image src="../../images/icon/secondhand.png"></image></button>
+      <button class="publish4"><image src="../../images/icon/findlost.png"></image></button>
+    </view>
   </view>
-</view>
-<!--添加按钮结束-->
+  <!--添加按钮结束-->
