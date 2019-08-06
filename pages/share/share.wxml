@@ -22,117 +22,34 @@
 
   <!--主题内容_开始-->
 <view class="main-content">
-  <view class="content">
+  <view class="content" wx:for='{{passage}}' wx:key="index">
     <view class="content-user">
-      <view class="user-head"><image src="../../images/logo.png"></image></view>
-      <view class="user-name">校园帮</view>
-      <view class="content-title">【快递代拿】</view>
+      <view class="user-head"><image src="{{item.userheaderimg}}"></image></view>
+      <view class="user-name">{{item.username}}</view>
+      <view class="content-title">【{{item.type}}】</view>
     </view>
     <view class="content-body">
-      <text space="nbsp">  有个快递没时间拿，求帮拿一下，有偿\n【菜鸟驿站】您的申通*8183包裹已由岳阳畔湖湾甲区2排4栋5号店免费保管，请18:30前凭“******”及时领取。\n联系驿站18073192675，\n地址：畔湖湾社区博才幼儿园后门菜鸟驿站。
-      </text>
+      <text space="nbsp">   {{item.content}}</text>
     </view>
     <view class="content-remark">
-      <input bindtouchstart="bindInput" placeholder="评论" value="{{comment}}" />
-      <button class="clickzan" bindtap="clickzan">
-      <image src="{{zanicon}}"></image>
-      </button>
+      <input bindtouchstart="clickcomment" placeholder="评论" focus="{{item.inputfocus}}"  data-id="{{item.id}}" bindblur="lostfocus"/>
+      <view class="passagebutton">
+        <button class="clickagree" bindtap="clickagree" data-id="{{item.id}}">
+          <image src="{{zanicon_haver}}" wx:if="{{item.isgood}}"></image>
+          <image src="{{zanicon}}" wx:else></image>
+        </button>
+        <button class="clickcomment" bindtap="clickcomment" data-id="{{item.id}}">
+          <image src="{{commenticon_haver}}" wx:if="{{item.inputfocus}}"></image>
+          <image src="{{commenticon}}" wx:else></image>  
+        </button>
+        <button class="clickshare" bindtap="clickshare"  data-id="{{item.id}}">
+          <image src="{{shareicon}}"></image>
+        </button>
+      </view>
       <text>\n</text>
     </view>
   </view>
-
-  <view class="content">
-    <view class="content-user">
-      <view class="user-head"><image src="../../images/logo.png"></image></view>
-      <view class="user-name">校园帮</view>
-      <view class="content-title">【校园动态】</view>
-    </view>
-    <view class="content-body">
-    <text space="nbsp">  三月，醉一场青春的流年。慢步在三月的春光里，走走停停，看花开嫣然，看春雨绵绵，感受春风拂面，春天，就是青春的流年。青春，是人生中最美的风景。青春，是一场花开的遇见；青春，是一场痛并快乐着的旅行；青春，是一场轰轰烈烈的比赛；青春，是一场鲜衣奴马的争荣岁月；青春，是一场风花雪月的光阴。</text>
-    </view>
-    <view class="content-remark">
-    <input bindtouchstart="bindInput" placeholder="评论" value="{{comment}}" />
-    <button class="clickzan" bindtap="clickzan">
-    <image src="{{zanicon}}"></image>
-    </button>
-    <text>\n</text>
-    </view>
   </view>
-  <view class="content">
-    <view class="content-user">
-      <view class="user-head"><image src="../../images/logo.png"></image></view>
-      <view class="user-name">校园帮</view>
-      <view class="content-title">【快递代拿】</view>
-    </view>
-    <view class="content-body">
-      <text space="nbsp">  有个快递没时间拿，求帮拿一下，有偿\n【菜鸟驿站】您的申通*8183包裹已由岳阳畔湖湾甲区2排4栋5号店免费保管，请18:30前凭“******”及时领取。\n联系驿站18073192675，\n地址：畔湖湾社区博才幼儿园后门菜鸟驿站。
-      </text>
-    </view>
-    <view class="content-remark">
-      <input bindtouchstart="bindInput" placeholder="评论" value="{{comment}}" />
-      <button class="clickzan" bindtap="clickzan">
-      <image src="{{zanicon}}"></image>
-      </button>
-      <text>\n</text>
-    </view>
-  </view>
-
-  <view class="content">
-    <view class="content-user">
-      <view class="user-head"><image src="../../images/logo.png"></image></view>
-      <view class="user-name">校园帮</view>
-      <view class="content-title">【校园动态】</view>
-    </view>
-    <view class="content-body">
-    <text space="nbsp">  三月，醉一场青春的流年。慢步在三月的春光里，走走停停，看花开嫣然，看春雨绵绵，感受春风拂面，春天，就是青春的流年。青春，是人生中最美的风景。青春，是一场花开的遇见；青春，是一场痛并快乐着的旅行；青春，是一场轰轰烈烈的比赛；青春，是一场鲜衣奴马的争荣岁月；青春，是一场风花雪月的光阴。</text>
-    </view>
-    <view class="content-remark">
-    <input bindtouchstart="bindInput" placeholder="评论" value="{{comment}}" />
-    <button class="clickzan" bindtap="clickzan">
-    <image src="{{zanicon}}"></image>
-    </button>
-    <text>\n</text>
-    </view>
-  </view>
-  <view class="content">
-    <view class="content-user">
-      <view class="user-head"><image src="../../images/logo.png"></image></view>
-      <view class="user-name">校园帮</view>
-      <view class="content-title">【快递代拿】</view>
-    </view>
-    <view class="content-body">
-      <text space="nbsp">  有个快递没时间拿，求帮拿一下，有偿\n【菜鸟驿站】您的申通*8183包裹已由岳阳畔湖湾甲区2排4栋5号店免费保管，请18:30前凭“******”及时领取。\n联系驿站18073192675，\n地址：畔湖湾社区博才幼儿园后门菜鸟驿站。
-      </text>
-    </view>
-    <view class="content-remark">
-      <input bindtouchstart="bindInput" placeholder="评论" value="{{comment}}" />
-      <button class="clickzan" bindtap="clickzan">
-      <image src="{{zanicon}}"></image>
-      </button>
-      <text>\n</text>
-    </view>
-  </view>
-
-  <view class="content">
-    <view class="content-user">
-      <view class="user-head"><image src="../../images/logo.png"></image></view>
-      <view class="user-name">校园帮</view>
-      <view class="content-title">【校园动态】</view>
-    </view>
-    <view class="content-body">
-    <text space="nbsp">  三月，醉一场青春的流年。慢步在三月的春光里，走走停停，看花开嫣然，看春雨绵绵，感受春风拂面，春天，就是青春的流年。青春，是人生中最美的风景。青春，是一场花开的遇见；青春，是一场痛并快乐着的旅行；青春，是一场轰轰烈烈的比赛；青春，是一场鲜衣奴马的争荣岁月；青春，是一场风花雪月的光阴。</text>
-    </view>
-    <view class="content-remark">
-    <input bindtouchstart="bindInput" placeholder="评论" value="{{comment}}" />
-    <button class="clickzan" bindtap="clickzan">
-    <image src="{{zanicon}}"></image>
-    </button>
-    <text>\n</text>
-    </view>
-  </view>
-
-</view>
-
 <!--主题内容_结束-->
 </view>
 

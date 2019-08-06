@@ -2,13 +2,14 @@
 .heard-location-text{
   position: absolute;
   overflow: hidden;
+  font-size: 23rpx;
 }
 .heard{
   justify-content: space-around;
   display: flex;
   width: 100%;
   height: 70rpx;
-  background:#0097e6;
+  background:rgba(0, 151, 230, 1);
 }
 .heard-location-icon{
   position: absolute;
@@ -31,7 +32,7 @@
   margin: 10rpx;
   width: 250rpx;
   height: 40rpx;
-  background: #035f91;
+  background: rgb(14, 131, 226);
   color: white;
   border-radius: 20rpx;
 }
@@ -42,7 +43,7 @@
   left: 250rpx; 
   width: 8rpx;
   height: 8rpx;
-  border: 3rpx solid #fff;
+  border: 3rpx solid #ffffff;
   border-bottom: none;
   border-left: none;
   transform: rotate(45deg);
@@ -193,33 +194,47 @@ justify-content:flex-end;
 
 .content-remark{
   margin-top: 20px;
+  height: 80rpx;
 }
 
 .content-remark input{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 14px;
-  width:85%;
+  width: 60%;
   border:1px solid #c3c3c3;
-  height:30px;
+  height:60rpx;
   border-radius: 3px;
   padding: 0 5px;
   float: left;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+
+.passagebutton{
+  width: 50%;
+  float: left;
+  margin-left: 500rpx;
+  margin-top: -60rpx;
 }
 
 .content-remark button{
-  width: 30px;
-  height: 30px;
-  border: 0 solid #000000;
-  border-radius: 250px;
+  background-color: rgba(255, 255, 255, 0);
+  margin-left: 15rpx;
+  width: 30rpx;
+  height: 45rpx;
+  float: left;
 }
 
-.clickzan image{
-  margin:auto auto auto -10px;
-  width: 30px;
-  height: 30px;
-  margin-left: -15px;
+.content-remark button:after{
+  border: none;
 }
 
+.passagebutton image{
+  margin-bottom: 20rpx;
+  margin-left: -25rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
 
 swiper-item image {
   margin-top: 30rpx;
@@ -245,6 +260,10 @@ swiper-item image {
   overflow: hidden;
   margin-bottom: 24rpx;
   border-radius:5px;
+}
+
+.goods-nature{
+  color:#0097e6;
 }
 .goods-box .img-box{
   width: 339rpx;

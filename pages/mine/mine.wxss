@@ -83,9 +83,9 @@
   margin-left: 2%;
   margin-right: 2%;
   height: 50px;
-  background-color:  #35baeeda;
+  background-color:  rgb(82, 196, 240);
   border-radius: 5px;
-  border: 1px solid #35baee;
+  border: 1px solid rgb(0, 151, 252);
   text-align: left;
 }
 
@@ -94,8 +94,8 @@
   margin-left: 2%;
   margin-right: 2%;
   height: 50px;
-  background-color:  #35baeeda;
+  background-color:  rgb(82, 196, 240);
   border-radius: 5px;
-  border: 1px solid #35baee;
+  border: 1px solid rgb(0, 151, 252);
   text-align: left;
 }

@@ -70,29 +70,44 @@
 
 .content-remark{
   margin-top: 20px;
+  height: 80rpx;
 }
 
 .content-remark input{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 14px;
-  width:85%;
+  width: 60%;
   border:1px solid #c3c3c3;
-  height:30px;
+  height:60rpx;
   border-radius: 3px;
   padding: 0 5px;
   float: left;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+
+.passagebutton{
+  width: 50%;
+  float: left;
+  margin-left: 500rpx;
+  margin-top: -60rpx;
 }
 
 .content-remark button{
-  width: 30px;
-  height: 30px;
-  border: 0 solid #000000;
-  border-radius: 250px;
+  background-color: rgba(255, 255, 255, 0);
+  margin-left: 15rpx;
+  width: 30rpx;
+  height: 45rpx;
+  float: left;
 }
 
-.clickzan image{
-  margin:auto auto auto -10px;
-  width: 30px;
-  height: 30px;
-  margin-left: -15px;
+.content-remark button:after{
+  border: none;
+}
+
+.passagebutton image{
+  margin-bottom: 20rpx;
+  margin-left: -25rpx;
+  width: 40rpx;
+  height: 40rpx;
 }
