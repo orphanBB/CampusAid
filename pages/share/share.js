@@ -143,6 +143,14 @@ Page({
    */
   onShareAppMessage: function () {
 
+    return {
+
+      title: '校园帮小程序活动助力',
+
+      path: '/pages/index/index' // 路径，传递参数到指定页面。
+
+    }
+
   },
   clickadd: function () {
     if (countclick == 0) {
